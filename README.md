@@ -38,5 +38,5 @@ Enhanced Discriminative Global-Local Feature Learning with Priority for Facial E
 
 ## Note
 - When training from scratch or pre-training, use *main.py* as well.
-- ***./checkpoint/test_for_RAF_DB.pth*** can be used for testing directly on RAF-DB
+- [Google Drive](https://drive.google.com/file/d/1ekLLs4Sh18elhsf5vslIi7YUr4VwjTRZ/view?usp=sharing) can be downloaded for testing directly on RAF-DB
 
