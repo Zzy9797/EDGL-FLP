@@ -1,5 +1,5 @@
 # EDGL-FLP
-* "[Enhanced Discriminative Global-Local Feature Learning with Priority for Facial Expression Recognition in the Wild]"*
+Enhanced Discriminative Global-Local Feature Learning with Priority for Facial Expression Recognition
 
 ## Requirements
 - Python >= 3.6
