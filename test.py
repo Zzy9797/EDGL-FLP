@@ -48,7 +48,7 @@ def main():
     # model.module.fc_p2p4 = torch.nn.Linear(1024, 8).cuda()
 
 
-    checkpoint = torch.load('./checkpoint/model_for_RAF.pth') 
+    checkpoint = torch.load('./checkpoint/model_for_RAF_DB.pth') 
     pre_trained_dict = checkpoint['state_dict']
     model.load_state_dict(pre_trained_dict)
 
