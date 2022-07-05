@@ -29,7 +29,7 @@ Enhanced Discriminative Global-Local Feature Learning with Priority for Facial E
 [Note] 0: Neutral; 1: Happiness; 2: Sadness; 3: Surprise; 4: Fear; 5: Disgust; 6: Anger
 ```
 
-- Step 2: put the pretrained model to***./checkpoint***.
+- Step 2: put the pretrained model to ***./checkpoint***.
     
 - Step 3: change ***data_path*** in *main.py* to your path 
 
