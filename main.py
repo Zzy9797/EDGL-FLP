@@ -41,7 +41,7 @@ parser.add_argument('--resume', default=checkpoint_path, type=str, metavar='PATH
 parser.add_argument('-e', '--evaluate', default=False, action='store_true', help='evaluate model on test set')
 parser.add_argument('--beta', type=float, default=0.6)
 parser.add_argument('--alpha',type=float,default=0.8)
-parser.add_argument('--gpu', type=str, default='7')
+parser.add_argument('--gpu', type=str, default='0')
 args = parser.parse_args()
 print('beta', args.beta)
 if not os.path.exists(args.log_path):
