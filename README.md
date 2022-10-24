@@ -40,3 +40,8 @@ Enhanced Discriminative Global-Local Feature Learning with Priority for Facial E
 - When training from scratch or pre-training, use *main.py* as well.
 - [Google Drive](https://drive.google.com/file/d/1ekLLs4Sh18elhsf5vslIi7YUr4VwjTRZ/view?usp=sharing) can be downloaded for testing directly on RAF-DB
 
+**Acknowledgments**
+
+Our work is based on the following work, thanks for the code:
+
+https://github.com/zengqunzhao/MA-Net
