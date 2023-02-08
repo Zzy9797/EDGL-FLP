@@ -3,6 +3,31 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+class DWConv(nn.Module):
+    def __init__(self,in_ch,out_ch):
+        super(DWConv, self).__init__()
+
+        self.depth_conv = nn.Conv2d(in_channels=in_ch,
+                                    out_channels=in_ch,
+                                    kernel_size=3,
+                                    stride=1,
+                                    padding=1,
+                                    groups=in_ch)
+        self.point_conv = nn.Conv2d(in_channels=in_ch,
+                                    out_channels=out_ch,
+                                    kernel_size=1,
+                                    stride=1,
+                                    padding=0,
+                                    groups=1)
+
+        self.bn = nn.BatchNorm2d(out_ch, eps=1e-5, momentum=0.01, affine=True)
+
+    def forward(self,input):
+        out = self.depth_conv(input)
+        out = self.point_conv(out)
+        out=self.bn(out)
+        return out
+
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
     """3x3 convolution with padding"""
     return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,
@@ -77,7 +102,7 @@ class S2A2M_inner(nn.Module):
         kernel_size = 7
         self.ChannelGate = ChannelGate4(gate_channels, reduction_ratio, pool_types)
         self.SpatialGate = SpatialGate4()
-        self.fusion = BasicConv4(2*gate_channels, gate_channels, kernel_size, stride=1, padding=(kernel_size-1) // 2, relu=False)
+        self.fusion=DWConv(2*gate_channels, gate_channels)
 
     def forward(self, x):
         x_out_avg,x_out_max=self.ChannelGate(x)
