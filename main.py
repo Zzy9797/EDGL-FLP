@@ -67,7 +67,7 @@ def main():
     model = torch.nn.DataParallel(model).cuda()
 
 
-    checkpoint = torch.load('./checkpoint/pre-trained_model.pth') 
+    checkpoint = torch.load('./checkpoint/pre-trained_EDGL-FLP.pth') 
     pre_trained_dict = checkpoint['state_dict']
     model.load_state_dict(pre_trained_dict)
  
