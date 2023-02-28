@@ -49,13 +49,7 @@ if not os.path.exists(args.log_path):
 
 
 def main():
-    # seed=5
-    # torch.manual_seed(seed)
-    # torch.cuda.manual_seed_all(seed)
-    # np.random.seed(seed)
-    # random.seed(seed)
-    # torch.backends.cudnn.deterministic = True
-    # torch.backends.cudnn.benchmark=False
+
 
     os.environ['CUDA_DEVICE_ORDER']='PCI_BUS_ID'
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
