@@ -17,7 +17,7 @@ import datetime
 import random
 import sys 
 from edgl import edgl
-from torchsampler import ImbalancedDatasetSampler
+
 
 now = datetime.datetime.now()
 time_str = now.strftime("[%m-%d]-[%H-%M]-")
@@ -105,7 +105,6 @@ def main():
     print(test_dataset.class_to_idx)
 
     train_loader = torch.utils.data.DataLoader(train_dataset,
-                                               #sampler=ImbalancedDatasetSampler(train_dataset),
                                                batch_size=args.batch_size,
                                                shuffle=True,
                                                num_workers=args.workers,
