@@ -1,1 +1,1 @@
-download the pre-trained models or trained test models from Google Drive and put them here.
+trained models are put here.
